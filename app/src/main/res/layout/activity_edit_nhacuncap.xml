@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditNhacuncapActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@color/white"
+        android:elevation="4dp"
+        app:title="App"
+        app:popupTheme="@color/black"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvTieuDe"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:background="#FFFF00"
+        android:gravity="center"
+        android:text="THÊM/SỬA NHÀ CUNG CẤP"
+        android:textColor="#FF0000"
+        android:textSize="14pt"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
+
+    <TextView
+        android:id="@+id/tvTen"
+        android:layout_width="wrap_content"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="Tên: "
+        android:textSize="13pt"
+        app:layout_constraintBottom_toBottomOf="@id/etTen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTieuDe" />
+
+    <EditText
+        android:id="@+id/etTen"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:textSize="13pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTen"
+        app:layout_constraintTop_toTopOf="@id/tvTen" />
+
+    <Button
+        android:id="@+id/btnLuu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LƯU"
+        android:textSize="14pt"
+        app:layout_constraintBottom_toBottomOf="@id/btnHuy"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnHuy"
+        app:layout_constraintTop_toTopOf="@id/btnHuy" />
+
+    <Button
+        android:id="@+id/btnHuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HỦY"
+        android:textSize="14pt"
+        app:layout_constraintLeft_toRightOf="@id/btnLuu"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTen" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
